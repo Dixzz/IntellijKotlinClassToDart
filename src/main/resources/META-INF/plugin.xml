@@ -1,0 +1,42 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.example.demo</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Demo</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="test@yourcompany.com" url="https://www.yourcompany.com">Unknown Co.</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description>Converts Kotlin data class to Dart, put existing Kotlin `data` class and it automagically generates dart class</description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <!--    <extensions defaultExtensionNs="com.intellij"></extensions>-->
+
+<!--    <actions>-->
+<!--        <action id="Test1" class="com.example.demo.Test1" text="some name" description="some desc">-->
+<!--            <add-to-group group-id="ToolsMenu" anchor="first"/>-->
+<!--        </action>-->
+<!--    </actions>-->
+
+    <actions>
+        <action class="com.example.demo.Test2" id="com.example.demo.Test2" text="Convert Kotlin Data Class to Dart">
+            <add-to-group group-id="NewGroup" anchor="last"/>
+        </action>
+    </actions>
+<!--    <application-components>-->
+<!--        <component>-->
+<!--            <implementation-class>com.example.demo.MyApplicationComponent</implementation-class>-->
+<!--        </component>-->
+<!--    </application-components>-->
+</idea-plugin>
